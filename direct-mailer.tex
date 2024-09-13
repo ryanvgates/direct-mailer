@@ -1,11 +1,12 @@
-\documentclass[10pt]{article} % 10pt font size default, 11pt and 12pt are also possible
+\documentclass[12pt]{article} % 10pt font size default, 11pt and 12pt are also possible
 
+\usepackage{pgffor}
 \usepackage{geometry} % Required for adjusting page dimensions
 
 %\longindentation=0pt % Un-commenting this line will push the closing "Sincerely," to the left of the page
 
 \geometry{
-	paper=a4paper, % Change to letterpaper for US letter
+	paper=letterpaper, % Change to letterpaper for US letter
 	top=3cm, % Top margin
 	bottom=1.5cm, % Bottom margin
 	left=4.5cm, % Left margin
@@ -21,7 +22,20 @@
 \usepackage{microtype} % Improve justification
 
 \begin{document}
+\pagenumbering{gobble}
 
-\include{2024/sender/name.tex}
- 
+\input{list-of-messages.tex}
+\input{list-of-recipients.tex}
+
+\foreach \message in { \messages } {
+	\foreach \recipient in { \recipients }{
+		\input{\recipient}
+
+		\input{\message}
+		\\
+		\\
+		\input{2024/sender/signature.tex}
+	}
+}
+
 \end{document}

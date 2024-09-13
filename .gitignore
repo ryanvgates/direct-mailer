@@ -2,6 +2,8 @@ messages
 recipients
 sender
 direct-mailer.pdf
+list-of-messages.tex
+list-of-recipients.tex
 
 # Created by https://www.toptal.com/developers/gitignore/api/latex
 # Edit at https://www.toptal.com/developers/gitignore?templates=latex
