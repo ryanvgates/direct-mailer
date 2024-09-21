@@ -27,8 +27,8 @@
 \input{list-of-messages.tex}
 \input{list-of-recipients.tex}
 
-\foreach \message in { \messages } {
-	\foreach \recipient in { \recipients }{
+\foreach \message in \messages {
+	\foreach \recipient in \recipients{
 		\input{\recipient}
 
 		\input{\message}
