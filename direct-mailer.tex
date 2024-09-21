@@ -29,6 +29,7 @@
 
 \foreach \message in \messages {
 	\foreach \recipient in \recipients{
+		\newpage
 		\input{\recipient}
 
 		\input{\message}
@@ -36,7 +37,6 @@
 		\\
 		\input{2024/sender/signature.tex}
 
-		\clearpage
 	}
 }
 
